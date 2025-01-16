@@ -1,16 +1,39 @@
 {
-  "name": "volumes-1tb-ssd-projects-astro-practice",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^5.1.4",
-    "astro": "^5.1.7",
-    "tailwindcss": "^3.4.17"
-  }
+	"name": "volumes-1tb-ssd-projects-astro-practice",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/tailwind": "^5.1.4",
+		"astro": "^5.1.7",
+		"prettier-plugin-astro": "^0.14.1",
+		"tailwindcss": "^3.4.17",
+		"tailwindcss-touch": "^1.0.1"
+	},
+	"devDependencies": {
+		"eslint": "^8.57.1",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-config-airbnb-typescript": "^17.1.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-react-app": "^7.0.1",
+		"eslint-plugin-check-file": "^2.8.0",
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-prettier": "^5.2.2",
+		"prettier": "^3.4.2",
+		"prettier-plugin-tailwindcss": "^0.5.14"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --quiet --fix"
+		],
+		"*.{js,jsx,ts,tsx,json,html,css,md}": [
+			"prettier --write --ignore-unknown"
+		]
+	}
 }

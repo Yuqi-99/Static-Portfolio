@@ -1,5 +1,19 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"],
+      "/*": ["./public/*"]
+    }
+  },
+  "include": [
+    "src",
+    ".eslintrc.cjs",
+    "tailwind.config.js",
+    "stylelint.config.cjs",
+    ".astro/types.d.ts",
+    "**/*"
+  ],
   "exclude": ["dist"]
 }
