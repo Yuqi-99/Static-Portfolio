@@ -1,8 +1,52 @@
 ---
-import background from '../assets/background.svg';
+import LocationIcon from '../assets/location.svg';
+import GithubIcon from '../assets/github-icon.svg';
+import SkypeIcon from '../assets/skype-icon.svg';
+import FigmaIcon from '../assets/figma-icon.svg';
 ---
 
-<div class='h-full'>
-	<div class='fixed left-0 top-0 -z-10 h-full w-full bg-sky-100'></div>
-	<section>Welcome to my portfolio</section>
-</div>
+<section class='flex h-full justify-center bg-grey-darkDefault' id='/'>
+	<div class='max-w-[1440px] px-8 py-10'>
+		<div class='flex w-full flex-col-reverse items-center justify-between md:flex-row'>
+			<!-- Wording section -->
+			<div class='mt-10 flex w-full flex-col md:w-1/2 lg:w-3/5'>
+				<p class='text-6xl font-bold text-grey-dark900'>Welcome to my portfolio 👋🏻</p>
+				<p class='mt-4 text-grey-dark600'>
+					I'm a Frontend Engineer with experience in web development using React.js and mobile app
+					development for Android and iOS using React Native
+				</p>
+				<div class='mt-10 flex flex-row items-center'>
+					<div class='flex h-6 w-6 items-center justify-center'>
+						<LocationIcon width={20} height={20} />
+					</div>
+					<p class='ml-2 text-grey-dark600'>Johor Bahru, Johor</p>
+				</div>
+				<div class='mt-1 flex flex-row items-center'>
+					<div class='flex h-6 w-6 items-center justify-center'>
+						<span class='relative flex h-3 w-3'>
+							<span
+								class='absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75'
+							></span>
+							<span class='relative inline-flex h-3 w-3 rounded-full bg-emerald-500'></span>
+						</span>
+					</div>
+					<p class='ml-2 text-grey-dark600'>Available in new project</p>
+				</div>
+				<div class='mt-10 flex flex-row gap-2'>
+					<button class='rounded-lg hover:bg-grey-light700'><GithubIcon /></button>
+					<button class='rounded-lg hover:bg-grey-light700'><SkypeIcon /></button>
+					<button class='rounded-lg hover:bg-grey-light700'><FigmaIcon /></button>
+				</div>
+			</div>
+
+			<!-- Image section -->
+			<div class='flex w-full items-center justify-center md:w-1/2 md:justify-end lg:w-2/5'>
+				<div class='relative flex h-[360px] w-80 place-content-end items-end'>
+					<div class='absolute bottom-4 right-4 h-80 w-72 bg-emerald-500 md:bottom-8 md:right-8'>
+					</div>
+					<div class='h-80 w-80 bg-grey-dark200 md:w-72'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

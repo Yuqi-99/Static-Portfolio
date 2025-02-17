@@ -1,8 +1,15 @@
-<div
-	class='flex h-28 w-full items-center justify-end bg-[#1A0B2E] text-xl font-semibold text-white'
->
-	<div class='flex px-8 flex-gap-x-28'>
-		<a href='/'>Home</a>
-		<a href='/about/'>About</a>
-	</div>
+---
+const textStyle = 'text-grey-dark600 hover:text-grey-dark950';
+---
+
+<div class='z-navigation sticky top-0 flex justify-center'>
+	<section
+		class='flex h-16 w-full max-w-[1440px] items-center justify-end bg-grey-darkDefault font-normal text-grey-dark600'
+	>
+		<div class='flex w-2/5 justify-around'>
+			<a href='#/' class={textStyle}>Home</a>
+			<a href='#about' class={textStyle}>About</a>
+			<a href='#blogs' class={textStyle}>Blogs</a>
+		</div>
+	</section>
 </div>

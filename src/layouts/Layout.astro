@@ -1,5 +1,7 @@
 ---
 import Header from 'src/components/Header.astro';
+import '../styles/global.css';
+import Footer from 'src/components/Footer.astro';
 ---
 
 <!doctype html>
@@ -9,25 +11,18 @@ import Header from 'src/components/Header.astro';
 		<meta name='viewport' content='width=device-width' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
-		<title>Astro Practice</title>
+		<title>Portfolio</title>
 	</head>
-	<div class='max-w-[1440px]'>
-		<Header />
-		<slot />
+
+	<div class='flex w-full items-center justify-center'>
+		<div class='flex w-full items-center justify-center'>
+			<div class='h-full min-h-[calc(100vh-112px)] w-full bg-grey-darkDefault text-white'>
+				<Header />
+				<slot />
+				<Footer />
+			</div>
+		</div>
 	</div>
 
-	<style>
-		html,
-		body {
-			margin: 0;
-			width: 100%;
-			height: 100%;
-		}
-
-		#container {
-			font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-			height: 100%;
-		}
-	</style>
 
 </html>
