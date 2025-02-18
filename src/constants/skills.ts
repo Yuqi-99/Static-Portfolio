@@ -1,81 +1,81 @@
 export const PROGRAMMING_LANGUAGES = [
 	{
 		name: 'javascript',
-		img: '../src/assets/techWeUse/javascript.svg',
+		img: '/images/techWeUse/javascript.svg',
 	},
 	{
 		name: 'typescript',
-		img: '../src/assets/techWeUse/typescript.svg',
+		img: '/images/techWeUse/typescript.svg',
 	},
 	{
 		name: 'react',
-		img: '../src/assets/techWeUse/react.svg',
+		img: '/images/techWeUse/react.svg',
 	},
 	{
 		name: 'html5',
-		img: '../src/assets/techWeUse/html5.svg',
+		img: '/images/techWeUse/html5.svg',
 	},
 	{
 		name: 'css',
-		img: '../src/assets/techWeUse/css.svg',
+		img: '/images/techWeUse/css.svg',
 	},
 	{
 		name: 'tailwindcss',
-		img: '../src/assets/techWeUse/tailwindcss.svg',
+		img: '/images/techWeUse/tailwindcss.svg',
 	},
 	{
 		name: 'storybook',
-		img: '../src/assets/techWeUse/storybook.svg',
+		img: '/images/techWeUse/storybook.svg',
 	},
 	{
 		name: 'nodejs',
-		img: '../src/assets/techWeUse/nodejs.svg',
+		img: '/images/techWeUse/nodejs.svg',
 	},
 	{
 		name: 'mariaDB',
-		img: '../src/assets/techWeUse/mariaDB.svg',
+		img: '/images/techWeUse/mariaDB.svg',
 	},
 ];
 
 export const DEVELOPMENT_TOOLS = [
 	{
 		name: 'git',
-		img: '../src/assets/techWeUse/git.svg',
+		img: '/images/techWeUse/git.svg',
 	},
 	{
 		name: 'aws',
-		img: '../src/assets/techWeUse/aws.svg',
+		img: '/images/techWeUse/aws.svg',
 	},
 	{
 		name: 'microsoftTeam',
-		img: '../src/assets/techWeUse/microsoftTeam.svg',
+		img: '/images/techWeUse/microsoftTeam.svg',
 	},
 	{
 		name: 'clickUp',
-		img: '../src/assets/techWeUse/clickUp.svg',
+		img: '/images/techWeUse/clickUp.svg',
 	},
 	{
 		name: 'github',
-		img: '../src/assets/techWeUse/github.svg',
+		img: '/images/techWeUse/github.svg',
 	},
 	{
 		name: 'gitlab',
-		img: '../src/assets/techWeUse/gitlab.svg',
+		img: '/images/techWeUse/gitlab.svg',
 	},
 	{
 		name: 'vscode',
-		img: '../src/assets/techWeUse/vscode.svg',
+		img: '/images/techWeUse/vscode.svg',
 	},
 	{
 		name: 'blender',
-		img: '../src/assets/techWeUse/blender.svg',
+		img: '/images/techWeUse/blender.svg',
 	},
 	{
 		name: 'docker',
-		img: '../src/assets/techWeUse/docker.svg',
+		img: '/images/techWeUse/docker.svg',
 	},
 	{
 		name: 'jenkins',
-		img: '../src/assets/techWeUse/jenkins.svg',
+		img: '/images/techWeUse/jenkins.svg',
 	},
 ];
