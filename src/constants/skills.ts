@@ -56,7 +56,7 @@ export const DEVELOPMENT_TOOLS = [
 	},
 	{
 		name: 'github',
-		img: '/images/techWeUse/github.svg',
+		img: '/images/techWeUse/github-icon.svg',
 	},
 	{
 		name: 'gitlab',
