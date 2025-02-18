@@ -47,6 +47,7 @@ export default {
 				'grey-dark950': '#ffffff',
 
 				'emerald-500': '#10b981',
+				'emerald-800': '#045238FF',
 			},
 			screens: {
 				xs: '390px',

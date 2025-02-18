@@ -1,0 +1,42 @@
+---
+import { cn } from 'src/utils/cn';
+
+const { reverse = false, data } = Astro.props;
+---
+
+<div
+	class='group mx-auto flex w-full max-w-[1536px] gap-10 overflow-hidden rounded-2xl border border-emerald-800 py-1.5'
+>
+	<div
+		class={cn(
+			'flex h-4/5 min-w-full shrink-0 gap-10 group-hover:[animation-play-state:paused]',
+			reverse ? 'marquee-animation-reverse' : 'marquee-animation'
+		)}
+	>
+		{
+			data && data.length > 0 ? (
+				data.map((content: { img: string; name: string }) => (
+					<img src={content.img} alt={content.name} class='h-16 w-16' />
+				))
+			) : (
+				<p>Data is empty or not loaded.</p>
+			)
+		}
+	</div>
+	<div
+		class={cn(
+			'flex min-w-full shrink-0 gap-10 group-hover:[animation-play-state:paused]',
+			reverse ? 'marquee-animation-reverse' : 'marquee-animation'
+		)}
+	>
+		{
+			data && data.length > 0 ? (
+				data.map((content: { img: string; name: string }) => (
+					<img src={content.img} alt={content.name} class='h-16 w-16' />
+				))
+			) : (
+				<p>Data is empty or not loaded.</p>
+			)
+		}
+	</div>
+</div>

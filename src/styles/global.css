@@ -38,3 +38,25 @@ h1 {
 	font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 	height: 100%;
 }
+
+@keyframes marquee {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(calc(-100% - 2.5rem));
+	}
+}
+
+.marquee-animation {
+	animation: marquee 10s linear infinite;
+}
+
+.marquee-animation-reverse {
+	animation: marquee 10s linear infinite reverse;
+}
+
+.paused-play-state {
+	animation-play-state: paused;
+}
