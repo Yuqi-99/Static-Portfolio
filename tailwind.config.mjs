@@ -62,6 +62,7 @@ export default {
 			},
 			zIndex: {
 				navigation: 1000,
+				'mobile-navigation': 1100,
 			},
 			spacing: {
 				15: '3.75rem',
