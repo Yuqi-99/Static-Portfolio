@@ -1,0 +1,32 @@
+---
+import ExperienceCard from 'src/components/experience/ExperienceCard.astro';
+import { EXPERIENCE } from 'src/constants/experience';
+---
+
+<section class='flex h-full justify-center bg-grey-dark50' id='about'>
+	<div class='w-full max-w-[1440px] px-8 py-28'>
+		<div class='w-fit rounded-full bg-grey-dark200 px-5 py-2'>
+			<p class='text-3xl'>Experience</p>
+		</div>
+
+		<div class='mt-12 flex flex-col items-center justify-center'>
+			<p class='text-center text-lg text-grey-dark600 md:text-2xl'>
+				Here is a quick summary of my most recent experiences
+			</p>
+		</div>
+
+		<div class='mt-12'>
+			{
+				EXPERIENCE.map((experience) => (
+					<ExperienceCard
+						img={experience.img}
+						title={experience.title}
+						content={experience.content}
+						contentDetails={experience?.contentDetails}
+						timeline={experience.timeline}
+					/>
+				))
+			}
+		</div>
+	</div>
+</section>
