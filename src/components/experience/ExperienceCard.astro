@@ -6,11 +6,15 @@ const { img, title, content, contentDetails, timeline } = Astro.props;
 	class='mt-10 flex w-full flex-col items-start justify-between rounded-lg bg-grey-dark100 p-8 md:flex-row md:items-center'
 >
 	<img src={img} alt={title} class='mb-4 h-24 w-32 md:mb-0' />
-	<p class='mb-4 block w-full md:hidden'>{timeline}</p>
+	<p class='mb-4 block w-full text-sm md:hidden'>{timeline}</p>
 	<div class='flex w-full flex-col justify-center md:w-3/5'>
 		<p class='text-2xl font-medium text-grey-dark900'>{title}</p>
-		<p class='text-xl font-normal text-grey-dark600'>{content}</p>
-		{contentDetails && <p class='mt-4 text-lg font-normal text-grey-dark600'>{contentDetails}</p>}
+		<p class='text-lg text-grey-dark600 md:text-xl'>{content}</p>
+		{
+			contentDetails && (
+				<p class='mt-4 text-sm font-thin text-grey-dark600 md:text-lg'>{contentDetails}</p>
+			)
+		}
 	</div>
 	<p class='hidden md:block'>{timeline}</p>
 </div>
