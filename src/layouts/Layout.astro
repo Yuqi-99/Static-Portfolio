@@ -2,6 +2,7 @@
 import Header from 'src/components/Header.astro';
 import '../styles/global.css';
 import Footer from 'src/components/Footer.astro';
+import 'aos/dist/aos.css';
 ---
 
 <!doctype html>
@@ -14,6 +15,11 @@ import Footer from 'src/components/Footer.astro';
 		<title>Portfolio</title>
 	</head>
 
+	<script>
+		import AOS from 'aos';
+		AOS.init();
+	</script>
+
 	<div class='flex w-full items-center justify-center'>
 		<div class='flex w-full items-center justify-center'>
 			<div class='h-full min-h-[calc(100vh-112px)] w-full bg-grey-darkDefault text-white'>
@@ -25,5 +31,6 @@ import Footer from 'src/components/Footer.astro';
 			</div>
 		</div>
 	</div>
+
 
 </html>
