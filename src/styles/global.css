@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
 	background-color: #f1f5f9;
 	font-family: sans-serif;

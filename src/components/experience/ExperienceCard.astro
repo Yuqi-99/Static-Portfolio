@@ -3,21 +3,25 @@ const { img, title, content, contentDetails, timeline } = Astro.props;
 ---
 
 <div
-	class='mt-10 flex w-full flex-col items-start justify-between rounded-lg bg-grey-dark100 p-8 md:flex-row md:items-center'
+	class='mt-10 flex w-full flex-col items-start justify-between rounded-lg bg-grey-light100 p-8 md:flex-row md:items-center dark:bg-grey-dark100'
 	data-aos='fade-up'
 	data-aos-duration='1000'
 	data-aos-anchor-placement='top-bottom'
 >
 	<img src={img} alt={title} class='mb-4 h-24 w-32 md:mb-0' />
-	<p class='mb-4 block w-full text-sm md:hidden'>{timeline}</p>
+	<p class='mb-4 block w-full text-sm text-grey-light600 md:hidden dark:text-grey-lightDefault'>
+		{timeline}
+	</p>
 	<div class='flex w-full flex-col justify-center md:w-3/5'>
-		<p class='text-2xl font-medium text-grey-dark900'>{title}</p>
-		<p class='text-lg text-grey-dark600 md:text-xl'>{content}</p>
+		<p class='text-2xl font-medium text-grey-light900 dark:text-grey-dark900'>{title}</p>
+		<p class='text-lg text-grey-light600 md:text-xl dark:text-grey-dark600'>{content}</p>
 		{
 			contentDetails && (
-				<p class='mt-4 text-sm font-thin text-grey-dark600 md:text-lg'>{contentDetails}</p>
+				<p class='mt-4 text-sm font-thin text-grey-light600 md:text-lg dark:text-grey-dark600'>
+					{contentDetails}
+				</p>
 			)
 		}
 	</div>
-	<p class='hidden md:block'>{timeline}</p>
+	<p class='hidden text-grey-light600 md:block dark:text-grey-lightDefault'>{timeline}</p>
 </div>

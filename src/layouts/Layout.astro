@@ -13,16 +13,85 @@ import 'aos/dist/aos.css';
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<meta name='generator' content={Astro.generator} />
 		<title>Portfolio</title>
-	</head>
 
-	<script>
-		import AOS from 'aos';
-		AOS.init();
-	</script>
+		<script>
+			import AOS from 'aos';
+			// 	AOS.init();
+
+			// 	const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+			// 	const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+			// 	const themeToggleBtn = document.getElementById('theme-toggle');
+
+			// 	if (
+			// 		localStorage.getItem('color-theme') === 'dark' ||
+			// 		(!('color-theme' in localStorage) &&
+			// 			window.matchMedia('(prefers-color-scheme: dark)').matches)
+			// 	) {
+			// 		document.documentElement.classList.add('dark');
+			// 		themeToggleLightIcon?.classList.remove('hidden');
+			// 	} else {
+			// 		document.documentElement.classList.remove('dark');
+			// 		themeToggleDarkIcon?.classList.remove('hidden');
+			// 	}
+
+			// 	themeToggleBtn?.addEventListener('click', function () {
+			// 		themeToggleDarkIcon?.classList.toggle('hidden');
+			// 		themeToggleLightIcon?.classList.toggle('hidden');
+
+			// 		if (localStorage.getItem('color-theme') === 'dark') {
+			// 			document.documentElement.classList.remove('dark');
+			// 			localStorage.setItem('color-theme', 'light');
+			// 		} else {
+			// 			document.documentElement.classList.add('dark');
+			// 			localStorage.setItem('color-theme', 'dark');
+			// 		}
+			// 	});
+			// });
+			document.addEventListener('DOMContentLoaded', () => {
+				AOS.init();
+
+				const themeToggleBtns = ['desktop', 'mobile'].map((type) => ({
+					btn: document.getElementById(`theme-toggle-${type}`),
+					lightIcon: document.getElementById(`theme-toggle-light-icon-${type}`),
+					darkIcon: document.getElementById(`theme-toggle-dark-icon-${type}`),
+				}));
+
+				const isDarkMode =
+					localStorage.getItem('color-theme') === 'dark' ||
+					(!localStorage.getItem('color-theme') &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+				function setThemeIcons(isDark: boolean) {
+					themeToggleBtns.forEach(({ lightIcon, darkIcon }) => {
+						if (isDark) {
+							lightIcon?.classList.remove('hidden');
+							darkIcon?.classList.add('hidden');
+						} else {
+							lightIcon?.classList.add('hidden');
+							darkIcon?.classList.remove('hidden');
+						}
+					});
+				}
+
+				setThemeIcons(isDarkMode);
+
+				themeToggleBtns.forEach(({ btn }) => {
+					btn?.addEventListener('click', () => {
+						document.documentElement.classList.toggle('dark');
+						const isDark = document.documentElement.classList.contains('dark');
+						localStorage.setItem('color-theme', isDark ? 'dark' : 'light');
+						setThemeIcons(isDark);
+					});
+				});
+			});
+		</script>
+	</head>
 
 	<div class='flex w-full items-center justify-center'>
 		<div class='flex w-full items-center justify-center'>
-			<div class='h-full min-h-[calc(100vh-112px)] w-full bg-grey-darkDefault text-white'>
+			<div
+				class='h-full min-h-[calc(100vh-112px)] w-full bg-grey-lightDefault text-white dark:bg-grey-darkDefault'
+			>
 				<Header />
 				<div>
 					<slot />

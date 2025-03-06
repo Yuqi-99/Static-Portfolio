@@ -24,19 +24,22 @@ import CopyIcon from '../assets/astro.svg';
 	});
 </script>
 
-<section class='flex h-full justify-center bg-grey-darkDefault' id='contact'>
+<section
+	class='flex h-full justify-center bg-grey-lightDefault dark:bg-grey-darkDefault'
+	id='contact'
+>
 	<div class='w-full max-w-[1440px] px-8 py-28'>
-		<div class='w-fit rounded-full bg-grey-dark200 px-5 py-2'>
-			<p class='text-3xl'>Get in touch</p>
+		<div class='w-fit rounded-full bg-grey-light200 px-5 py-2 dark:bg-grey-dark200'>
+			<p class='text-3xl text-grey-light600 dark:text-grey-lightDefault'>Get in touch</p>
 		</div>
 
 		<div class='mt-12 flex flex-col items-center justify-center md:px-16'>
-			<p class='text-center text-2xl text-grey-dark600'>
+			<p class='text-center text-2xl text-grey-light600 dark:text-grey-dark600'>
 				What’s next? Feel free to reach out to me if you are looking for a developer, have a query,
 				or simply want to connect.
 			</p>
 
-			<p class='mt-16 text-xl md:text-4xl'>
+			<p class='mt-16 text-xl text-grey-light600 md:text-4xl dark:text-grey-lightDefault'>
 				qutineong08@gmail.com
 				<button id='emailCopyButton'>
 					<div class='md:text-2xl'>
@@ -45,7 +48,7 @@ import CopyIcon from '../assets/astro.svg';
 				</button>
 			</p>
 
-			<p class='mt-4 text-xl md:text-4xl'>
+			<p class='mt-4 text-xl text-grey-light600 md:text-4xl dark:text-grey-lightDefault'>
 				+60 1127738515
 				<button id='phoneCopyButton'>
 					<div class='md:text-2xl'>
@@ -54,19 +57,21 @@ import CopyIcon from '../assets/astro.svg';
 				</button>
 			</p>
 
-			<p class='mt-10 text-center text-grey-dark600'>You may also find me on these playforms!</p>
+			<p class='mt-10 text-center text-grey-light600 dark:text-grey-dark600'>
+				You may also find me on these playforms!
+			</p>
 			<div class='mt-4 flex flex-row gap-8'>
-				<button class='rounded-lg p-1 hover:bg-grey-light700'>
+				<button class='rounded-lg p-1 hover:bg-grey-dark700 dark:hover:bg-grey-light700'>
 					<a href='https://github.com/Yuqi-99?tab=repositories'>
 						<GithubIcon class='h-6 w-6' />
 					</a>
 				</button>
-				<button class='rounded-lg p-1 hover:bg-grey-light700'>
+				<button class='rounded-lg p-1 hover:bg-grey-dark700 dark:hover:bg-grey-light700'>
 					<a href='https://www.instagram.com/yuqi_9919?igsh=MnJieTI2Ynpid2pv'>
 						<InstaIcon class='h-6 w-6' />
 					</a>
 				</button>
-				<button class='rounded-lg p-1 hover:bg-grey-light700'>
+				<button class='rounded-lg p-1 hover:bg-grey-dark700 dark:hover:bg-grey-light700'>
 					<a href='https://www.linkedin.com/in/ong-yu-qi-9a2a63210'>
 						<LinkedlnIcon class='h-6 w-6' />
 					</a>

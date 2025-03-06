@@ -5,21 +5,27 @@ import InstaIcon from '../assets/insta-icon.svg';
 import LinkedlnIcon from '../assets/linkedln-icon.svg';
 ---
 
-<section class='flex h-full justify-center bg-grey-darkDefault' id='/'>
+<section class='flex h-full justify-center bg-grey-lightDefault dark:bg-grey-darkDefault' id='/'>
 	<div class='w-full max-w-[1440px] px-8 py-16'>
 		<div class='flex w-full flex-col-reverse items-center justify-between md:flex-row'>
 			<!-- Wording section -->
 			<div class='mt-10 flex w-full flex-col md:w-1/2 lg:w-3/5'>
-				<p class='text-6xl font-bold text-grey-dark900'>Welcome to my portfolio 👋🏻</p>
-				<p class='mt-4 text-grey-dark600'>
+				<p class='text-6xl font-bold text-grey-light900 dark:text-grey-dark900'>
+					Welcome to my portfolio 👋🏻
+				</p>
+				<p class='mt-4 text-grey-light600 dark:text-grey-dark600'>
 					I'm a Frontend Engineer with experience in web development using React.js and mobile app
 					development for Android and iOS using React Native
 				</p>
 				<div class='mt-10 flex flex-row items-center'>
 					<div class='flex h-6 w-6 items-center justify-center'>
-						<LocationIcon width={20} height={20} />
+						<LocationIcon
+							width={20}
+							height={20}
+							class='text-grey-light600 dark:text-grey-dark600'
+						/>
 					</div>
-					<p class='ml-2 text-grey-dark600'>Johor Bahru, Johor</p>
+					<p class='ml-2 text-grey-light600 dark:text-grey-dark600'>Johor Bahru, Johor</p>
 				</div>
 				<div class='mt-1 flex flex-row items-center'>
 					<div class='flex h-6 w-6 items-center justify-center'>
@@ -30,30 +36,30 @@ import LinkedlnIcon from '../assets/linkedln-icon.svg';
 							<span class='relative inline-flex h-3 w-3 rounded-full bg-emerald-500'></span>
 						</span>
 					</div>
-					<p class='ml-2 text-grey-dark600'>Available in new project</p>
+					<p class='ml-2 text-grey-light600 dark:text-grey-dark600'>Available in new project</p>
 				</div>
 				<div class='mt-10 flex flex-row gap-8'>
-					<button class='rounded-lg p-1 hover:bg-grey-light700'>
+					<button class='rounded-lg p-1 hover:bg-grey-dark700 dark:hover:bg-grey-light700'>
 						<a href='https://github.com/Yuqi-99?tab=repositories' target='_blank' rel='noreferrer'>
-							<GithubIcon class='h-6 w-6' />
+							<GithubIcon class='h-6 w-6 text-grey-light950 dark:text-white' />
 						</a>
 					</button>
-					<button class='rounded-lg p-1 hover:bg-grey-light700'>
+					<button class='rounded-lg p-1 hover:bg-grey-dark700 dark:hover:bg-grey-light700'>
 						<a
 							href='https://www.instagram.com/yuqi_9919?igsh=MnJieTI2Ynpid2pv'
 							target='_blank'
 							rel='noreferrer'
 						>
-							<InstaIcon class='h-6 w-6' />
+							<InstaIcon class='h-6 w-6 text-grey-light950 dark:text-white' />
 						</a>
 					</button>
-					<button class='rounded-lg p-1 hover:bg-grey-light700'>
+					<button class='rounded-lg p-1 hover:bg-grey-dark700 dark:hover:bg-grey-light700'>
 						<a
 							href='https://www.linkedin.com/in/ong-yu-qi-9a2a63210'
 							target='_blank'
 							rel='noreferrer'
 						>
-							<LinkedlnIcon class='h-6 w-6' />
+							<LinkedlnIcon class='h-6 w-6 text-grey-light950 dark:text-white' />
 						</a>
 					</button>
 				</div>

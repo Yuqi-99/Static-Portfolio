@@ -3,17 +3,22 @@ import Marquees from 'src/components/skills/Marquees.astro';
 import { PROGRAMMING_LANGUAGES, DEVELOPMENT_TOOLS } from 'src/constants/skills';
 ---
 
-<section class='flex h-full justify-center bg-grey-darkDefault' id='skills'>
+<section
+	class='bg-grey-light-default flex h-full justify-center dark:bg-grey-darkDefault'
+	id='skills'
+>
 	<div class='w-full max-w-[1440px] px-8 py-28'>
-		<div class='w-fit rounded-full bg-grey-dark200 px-5 py-2'>
-			<p class='text-3xl'>Skills</p>
+		<div class='w-fit rounded-full bg-grey-light200 px-5 py-2 dark:bg-grey-dark200'>
+			<p class='text-3xl text-grey-light600 dark:text-grey-lightDefault'>Skills</p>
 		</div>
 
 		<div class='mt-12 flex flex-col items-center justify-center'>
 			<Marquees data={PROGRAMMING_LANGUAGES} />
 			<div class='my-8 max-w-[579px] space-y-4 lg:mb-14 lg:mt-15 lg:space-y-8'>
-				<p class='text-center text-[2rem] font-black text-grey-dark900 lg:text-5xl'>
-					The skills, tools and technologies <span class='text-grey-dark900'
+				<p
+					class='text-center text-[2rem] font-black text-grey-light900 lg:text-5xl dark:text-grey-dark900'
+				>
+					The skills, tools and technologies <span class='text-grey-light900 dark:text-grey-dark900'
 						>I am really good at</span
 					>
 				</p>

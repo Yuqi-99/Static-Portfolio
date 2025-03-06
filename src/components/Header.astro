@@ -1,8 +1,12 @@
 ---
 import MenuIcon from '../assets/menu-icon.svg';
 import CloseIcon from '../assets/close-icon.svg';
+import LightIcon from '../assets/light-icon.svg';
+import DarkIcon from '../assets/dark-icon.svg';
+import { cn } from 'src/utils/cn';
 
-const textStyle = 'text-grey-dark600 hover:text-grey-dark950';
+const textStyle =
+	'text-grey-light600 dark:text-grey-dark600 dark:hover:text-grey-dark950 hover:text-grey-light950';
 ---
 
 <script>
@@ -36,15 +40,26 @@ const textStyle = 'text-grey-dark600 hover:text-grey-dark950';
 
 <div class='sticky top-0 z-navigation flex justify-center'>
 	<section
-		class='flex h-16 w-full max-w-[1440px] items-center justify-end bg-grey-darkDefault/50 font-normal text-grey-dark600 backdrop-blur-lg'
+		class='flex h-16 w-full max-w-[1440px] items-center justify-end bg-grey-lightDefault/80 font-normal text-grey-light600 backdrop-blur-lg dark:bg-grey-darkDefault/50 dark:text-grey-dark600'
 	>
 		<div class='flex w-full justify-between px-6'>
-			<p class='text-2xl font-bold text-grey-dark800'>{`<YQ />`}</p>
-			<div class='hidden items-center gap-10 md:flex'>
+			<p class='text-2xl font-bold text-grey-light800 dark:text-grey-dark800'>{`<YQ />`}</p>
+			<div class='hidden items-center gap-6 md:flex'>
 				<a href='#/' class={textStyle}>HOME</a>
 				<a href='#about' class={textStyle}>ABOUT</a>
 				<a href='#blogs' class={textStyle}>PORTFOLIO</a>
 				<a href='#contact' class={textStyle}>CONTACT ME</a>
+				<hr class='h-6 border-r border-grey-light100 dark:border-grey-dark100' />
+				<button id='theme-toggle-desktop' type='button'>
+					<LightIcon
+						id='theme-toggle-light-icon-desktop'
+						class={cn('hidden cursor-pointer', textStyle)}
+					/>
+					<DarkIcon
+						id='theme-toggle-dark-icon-desktop'
+						class={cn('hidden cursor-pointer', textStyle)}
+					/>
+				</button>
 			</div>
 
 			<button type='button' id='menu-button' class='flex md:hidden'>
@@ -55,23 +70,44 @@ const textStyle = 'text-grey-dark600 hover:text-grey-dark950';
 </div>
 
 <!-- Drawer Overlay -->
-<div id='drawer-overlay' class='fixed inset-0 z-navigation hidden bg-black/50'></div>
+<div id='drawer-overlay' class='fixed inset-0 z-navigation hidden bg-white/50 dark:bg-black/50'>
+</div>
 
 <!-- Drawer Navigation -->
 <div
 	id='drawer-navigation'
-	class='fixed right-0 top-0 z-navigation h-full w-64 translate-x-full transform bg-grey-darkDefault shadow-lg transition-transform duration-300 ease-in-out'
+	class='fixed right-0 top-0 z-navigation h-full w-64 translate-x-full transform bg-grey-lightDefault shadow-lg transition-transform duration-300 ease-in-out dark:bg-grey-darkDefault'
 >
-	<div class='flex items-center justify-between border-b border-grey-dark100 p-4'>
-		<p class='text-2xl font-bold text-grey-dark800'>{`<YQ />`}</p>
+	<div
+		class='flex items-center justify-between border-b border-grey-light100 p-4 dark:border-grey-dark100'
+	>
+		<p class='text-2xl font-bold text-grey-light800 dark:text-grey-dark800'>{`<YQ />`}</p>
 		<button id='drawer-close'>
-			<CloseIcon class='h-4 w-4' />
+			<CloseIcon class='h-4 w-4 text-grey-darkDefault dark:text-grey-lightDefault' />
 		</button>
 	</div>
 	<nav class='flex flex-col gap-4 p-4'>
-		<a href='#/' class='text-grey-dark600 hover:text-grey-dark950'>HOME</a>
+		<a
+			href='#/'
+			class='text-grey-light600 hover:text-grey-light950 dark:text-grey-dark600 dark:hover:text-grey-dark950'
+			>HOME
+		</a>
 		<a href='#about' class={textStyle}>ABOUT</a>
 		<a href='#blogs' class={textStyle}>PORTFOLIO</a>
 		<a href='#contact' class={textStyle}>CONTACT ME</a>
+		<hr />
+		<div class='flex items-center justify-between'>
+			<p class='text-grey-light600 dark:text-grey-dark600'>SWITCH THEME</p>
+			<button id='theme-toggle-mobile' type='button'>
+				<LightIcon
+					id='theme-toggle-light-icon-mobile'
+					class={cn('hidden cursor-pointer', textStyle)}
+				/>
+				<DarkIcon
+					id='theme-toggle-dark-icon-mobile'
+					class={cn('hidden cursor-pointer', textStyle)}
+				/>
+			</button>
+		</div>
 	</nav>
 </div>
