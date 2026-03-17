@@ -1,0 +1,48 @@
+---
+const { url, imageUrl, imageAlt } = Astro.props;
+import { cn } from 'src/utils/cn';
+import OpenNewWindow from '../assets/open-new-window.svg';
+---
+
+<!-- Store the message prop as a data attribute. -->
+<astro-greet
+	data-message={url}
+	class={cn(
+		'flex w-full items-center justify-center',
+		imageUrl ? 'justify-center' : 'justify-start'
+	)}
+>
+	{
+		!imageUrl && (
+			<button class='flex w-fit items-start rounded-xl p-2 hover:bg-grey-light50 hover:dark:bg-grey-dark50'>
+				<OpenNewWindow class='text-grey-light500' id='open new window' />
+			</button>
+		)
+	}
+	{
+		imageUrl && (
+			<button class='w-full'>
+				<img
+					src={imageUrl}
+					alt={imageAlt}
+					class='zoom lg:h-72 w-full cursor-pointer rounded-lg object-top'
+				/>
+			</button>
+		)
+	}
+</astro-greet>
+
+<script>
+	class AstroGreet extends HTMLElement {
+		connectedCallback() {
+			// Read the message from the data attribute.
+			const message = this.dataset.message;
+			const button = this.querySelector('button');
+			button?.addEventListener('click', () => {
+				window.open(message, '_blank');
+			});
+		}
+	}
+
+	customElements.define('astro-greet', AstroGreet);
+</script>

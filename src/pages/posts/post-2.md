@@ -1,13 +1,12 @@
 ---
 layout: src/layouts/MarkdownPostLayout.astro
-title: My Second Blog Post
-author: Astro Learner
-description: "After learning some Astro, I couldn't stop!"
+title: 'Planto Breath Natural'
+pubDate: 2025-10-02
+description: 'A visually immersive landing experience crafted for a wellness-focused brand, emphasizing natural aesthetics and emotional design. The interface leverages smooth animations, responsive layouts, and clear content hierarchy to enhance user engagement and guide users toward conversion, while ensuring performance optimization across devices.'
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
-  alt: 'The Astro logo on a dark background with a purple gradient arc.'
-pubDate: 2022-07-08
-tags: ['astro', 'blogging', 'learning in public', 'successes']
+  url: '/images/blogs/planto.png'
+  alt: 'Planto example'
+tags: ['React', 'Typescript', 'Tailwindcss', 'React Hook Form', 'GSAP', 'Swiper', 'Zod', 'Zustand']
+url: 'https://planto-breath-natural.netlify.app/'
+left: false'
 ---
-
-After a successful first week learning Astro, I decided to try some more. I wrote and imported a small component from memory!

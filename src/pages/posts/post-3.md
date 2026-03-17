@@ -1,13 +1,12 @@
 ---
 layout: src/layouts/MarkdownPostLayout.astro
-title: My Third Blog Post
-author: Astro Learner
-description: 'I had some challenges, but asking in the community really helped!'
+title: 'Easybank'
+pubDate: 2025-04-11
+description: 'A responsive digital banking interface that showcases modern financial services, featuring clean UI components, smooth user interactions, and a scalable front-end structure optimized for accessibility and performance.'
 image:
-  url: 'https://docs.astro.build/assets/rays.webp'
-  alt: 'The Astro logo on a dark background with rainbow rays.'
-pubDate: 2022-07-15
-tags: ['astro', 'learning in public', 'setbacks', 'community']
+  url: '/images/blogs/easybank.png'
+  alt: 'Easybank example'
+tags: ['React', 'Next', 'Typescript', 'Tailwindcss']
+url: 'https://easybank-next.netlify.app/'
+left: 'true'
 ---
-
-It wasn't always smooth sailing, but I'm enjoying building with Astro. And, the [Discord community](https://astro.build/chat) is really friendly and helpful!
