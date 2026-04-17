@@ -8,5 +8,5 @@ image:
   alt: "Charlie's Organic example"
 tags: ['React', 'Typescript', 'Tailwindcss', 'Motion']
 url: 'https://drink-charlies.netlify.app/'
-left: 'true'
+left: 'false'
 ---
