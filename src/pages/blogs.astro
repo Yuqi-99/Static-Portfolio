@@ -20,44 +20,46 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
 			</p>
 			<div class='mt-8 h-full w-full'>
 				{
-					allPosts.map((post: any) => (
-						<div
-							class={cn(
-								'mb-8 flex h-full w-full flex-col items-center justify-between overflow-hidden rounded-lg bg-grey-light50 shadow dark:bg-grey-dark300 lg:min-h-[360px] lg:flex-row',
-								post.frontmatter.left !== 'true' ? 'lg:flex-row-reverse' : ''
-							)}
-						>
-							<div class='flex h-full w-full items-center justify-center p-8 lg:w-1/2'>
-								<Button
-									url={post.frontmatter.url}
-									imageUrl={post.frontmatter.image.url}
-									imageAlt={post.frontmatter.image.alt}
-								/>
-							</div>
-							{/* desc section */}
-							<div class='flex h-full min-h-[360px] w-full flex-col items-start justify-start gap-y-8 bg-white px-6 lg:px-10 py-8 dark:bg-grey-dark100 lg:w-1/2'>
-								<p class='text-2xl font-medium text-grey-darkDefault dark:text-grey-light100'>
-									{post.frontmatter.title}
-								</p>
-
-								<p class='text-base font-light text-grey-darkDefault dark:text-grey-light100'>
-									{post.frontmatter.description}
-								</p>
-
-								<div class='flex w-full flex-wrap gap-4'>
-									{post.frontmatter.tags.map((tag: string) => (
-										<div class='rounded-full bg-grey-light200 px-5 py-1 dark:bg-grey-dark200'>
-											<p class='text-sm font-medium text-grey-light600 dark:text-grey-light100'>
-												{tag}
-											</p>
-										</div>
-									))}
+					allPosts.map((post: any) => {
+						return (
+							<div
+								class={cn(
+									'mb-8 flex h-full w-full flex-col items-center justify-between overflow-hidden rounded-lg bg-grey-light50 shadow dark:bg-grey-dark300 lg:min-h-[360px] lg:flex-row',
+									post.frontmatter.left !== 'true' ? 'lg:flex-row-reverse' : ''
+								)}
+							>
+								<div class='flex h-full w-full items-center justify-center p-8 lg:w-1/2'>
+									<Button
+										url={post.frontmatter.url}
+										imageUrl={post.frontmatter.image.url}
+										imageAlt={post.frontmatter.image.alt}
+									/>
 								</div>
+								{/* desc section */}
+								<div class='flex h-full min-h-[360px] w-full flex-col items-start justify-start gap-y-8 bg-white px-6 py-8 dark:bg-grey-dark100 lg:w-1/2 lg:px-10'>
+									<p class='text-2xl font-medium text-grey-darkDefault dark:text-grey-light100'>
+										{post.frontmatter.title}
+									</p>
 
-								<Button url={post.frontmatter.url} />
+									<p class='text-base font-light text-grey-darkDefault dark:text-grey-light100'>
+										{post.frontmatter.description}
+									</p>
+
+									<div class='flex w-full flex-wrap gap-4'>
+										{post.frontmatter.tags.map((tag: string) => (
+											<div class='rounded-full bg-grey-light200 px-5 py-1 dark:bg-grey-dark200'>
+												<p class='text-sm font-medium text-grey-light600 dark:text-grey-light100'>
+													{tag}
+												</p>
+											</div>
+										))}
+									</div>
+
+									<Button url={post.frontmatter.url} />
+								</div>
 							</div>
-						</div>
-					))
+						);
+					})
 				}
 			</div>
 		</div>
