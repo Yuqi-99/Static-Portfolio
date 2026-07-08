@@ -1,12 +1,12 @@
 ---
 layout: src/layouts/MarkdownPostLayout.astro
-title: 'Ethical Life'
-pubDate: 2026-03-16
-description: 'A sustainability-driven web platform designed to promote ethical living through thoughtfully structured content and refined user experience. The project focuses on delivering high readability and engagement by combining modern UI patterns, smooth interactions, and responsive design, while maintaining a scalable and maintainable front-end architecture.'
+title: "Charlie's Organic"
+pubDate: 2026-04-17
+description: 'A modern beverage brand website that showcases organic, zero-sugar sparkling drinks through a clean, lifestyle-driven interface. The design emphasizes transparency, sustainability, and product clarity—highlighting natural ingredients and eco-conscious values—while delivering a smooth, responsive experience optimized for brand storytelling and user engagement.'
 image:
-  url: '/images/blogs/ethical-life.jpg'
-  alt: 'Ethical life example'
-tags: ['React', 'Typescript', 'Tailwindcss', 'GSAP']
-url: 'https://ethical-life-world.netlify.app/'
+  url: '/images/blogs/charlie-organic.png'
+  alt: "Charlie's Organic example"
+tags: ['React', 'Typescript', 'Tailwindcss', 'Motion']
+url: 'https://drink-charlies.netlify.app/'
 left: 'false'
 ---

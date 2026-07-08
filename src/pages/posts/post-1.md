@@ -1,12 +1,12 @@
 ---
 layout: src/layouts/MarkdownPostLayout.astro
-title: "Ribbit"
-pubDate: 2026-05-20
-description: 'A modern fintech and Web3-inspired platform designed to simplify complex digital finance experiences through intuitive user flows and scalable front-end architecture. The project emphasizes accessibility, responsive interaction design, and high-performance UI delivery, translating advanced crypto and multi-chain concepts into a clean, user-friendly product experience aligned with modern financial applications.'
+title: 'Jeskojets Flight'
+pubDate: 2026-07-01
+description: 'A modern fintech landing experience inspired by next-generation digital banking, designed to simplify financial services through intuitive user journeys and clean interface design. Built with a reusable component architecture, the project emphasizes responsive layouts, accessibility, and performance optimization to deliver a seamless cross-device experience while showcasing scalable front-end engineering practices.'
 image:
-  url: '/images/blogs/ribbit.png'
-  alt: "RibbitDK example"
-tags: ['React', 'Typescript', 'Tailwindcss', 'GSAP']
-url: 'https://ribbitdk.netlify.app/'
+  url: '/images/blogs/jesko.jpg'
+  alt: 'Jeskojets example'
+tags: ['React', 'Typescript', 'Tailwindcss', 'Motion']
+url: 'https://jeskojets-flight.netlify.app/'
 left: 'false'
 ---
