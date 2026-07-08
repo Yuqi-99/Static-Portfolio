@@ -2,7 +2,7 @@
 layout: src/layouts/MarkdownPostLayout.astro
 title: "Ribbit"
 pubDate: 2026-05-20
-description: 'A modern fintech and Web3-inspired platform designed to simplify complex digital finance experiences through intuitive user flows and scalable front-end architecture. The project emphasizes accessibility, responsive interaction design, and high-performance UI delivery, translating advanced crypto and multi-chain concepts into a clean, user-friendly product experience aligned with modern financial applications.'
+description: 'A creative motion agency website designed to showcase animation, brand storytelling, and motion design services through a highly interactive digital experience. The project focuses on translating a playful studio identity into responsive web interactions, smooth visual transitions, and structured content flows, creating a memorable portfolio-style platform that highlights creativity while maintaining strong front-end execution.'
 image:
   url: '/images/blogs/ribbit.png'
   alt: "RibbitDK example"
