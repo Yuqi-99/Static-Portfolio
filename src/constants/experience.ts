@@ -12,7 +12,7 @@ export const EXPERIENCE = [
 		content: 'Junior Software Engineer',
 		contentDetails:
 			'As a Junior Software Developer, I specialize in Frontend Development, with a focus on building web applications using React.js and mobile applications with React Native. I have hands-on experience leveraging modern UI frameworks such as Tailwind CSS, Chakra UI, and Mantine UI to create intuitive, visually appealing, and user-friendly interfaces. My strong communication skills enable me to collaborate effectively with team members, fostering seamless project execution and a cohesive team environment. I am deeply committed to continuous learning, staying abreast of the latest industry trends, and adopting emerging technologies to deliver innovative, high-quality solutions that drive impactful results.',
-		timeline: 'Nov 2022 - Jan 2024',
+		timeline: 'Nov 2022 - Dec 2023',
 	},
 	{
 		img: '/images/experience/atoz.svg',

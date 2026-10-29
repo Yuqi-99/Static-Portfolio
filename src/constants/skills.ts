@@ -53,6 +53,7 @@ export const DEVELOPMENT_TOOLS = [
 	{
 		name: 'clickUp',
 		img: '/images/techWeUse/clickUp.svg',
+		lightImg: '/images/techWeUse/clickUp-icon.svg',
 	},
 	{
 		name: 'github',
@@ -77,5 +78,6 @@ export const DEVELOPMENT_TOOLS = [
 	{
 		name: 'jenkins',
 		img: '/images/techWeUse/jenkins.svg',
+		iconOnlyInLight: true,
 	},
 ];

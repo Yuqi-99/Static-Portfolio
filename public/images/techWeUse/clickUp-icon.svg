@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<title>ClickUp</title>
+	<defs>
+		<linearGradient id="clickup-chevron" x1="2.39" y1="4.21" x2="18.35" y2="14.05" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#FF02F0" />
+			<stop offset="1" stop-color="#FFC800" />
+		</linearGradient>
+		<linearGradient id="clickup-curve" x1="2" y1="18.55" x2="18.64" y2="18.55" gradientUnits="userSpaceOnUse">
+			<stop stop-color="#7B68EE" />
+			<stop offset="1" stop-color="#49CCF9" />
+		</linearGradient>
+	</defs>
+	<path d="M10.354 9.338L15.822 14.046L18.352 11.108L10.342 4.214L2.392 11.114L4.932 14.039L10.354 9.338Z" fill="url(#clickup-chevron)" />
+	<path d="M2 17.454L5.072 15.1C6.702 17.226 8.435 18.207 10.364 18.207C12.283 18.207 13.967 17.237 15.524 15.127L18.639 17.427C16.392 20.467 13.607 22 10.364 22C7.132 22 4.318 20.478 2 17.454Z" fill="url(#clickup-curve)" />
+</svg>

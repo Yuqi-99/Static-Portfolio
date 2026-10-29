@@ -15,9 +15,35 @@ const { reverse = false, data } = Astro.props;
 	>
 		{
 			data && data.length > 0 ? (
-				data.map((content: { img: string; name: string }) => (
-					<img src={content.img} alt={content.name} class='h-16 w-16' />
-				))
+				data.map(
+					(content: {
+						img: string;
+						iconOnlyInLight?: boolean;
+						lightImg?: string;
+						name: string;
+					}) => (
+						<>
+							{content.iconOnlyInLight ? (
+								<div class='h-16 w-16 overflow-hidden dark:hidden'>
+									<img src={content.img} alt={content.name} class='h-16 w-auto max-w-none' />
+								</div>
+							) : (
+								<img
+									src={content.lightImg ?? content.img}
+									alt={content.name}
+									class={cn('h-16 w-16 object-contain', content.lightImg && 'dark:hidden')}
+								/>
+							)}
+							{(content.lightImg || content.iconOnlyInLight) && (
+								<img
+									src={content.img}
+									alt={content.name}
+									class='hidden h-16 w-16 object-contain dark:block'
+								/>
+							)}
+						</>
+					)
+				)
 			) : (
 				<p>Data is empty or not loaded.</p>
 			)
@@ -31,9 +57,35 @@ const { reverse = false, data } = Astro.props;
 	>
 		{
 			data && data.length > 0 ? (
-				data.map((content: { img: string; name: string }) => (
-					<img src={content.img} alt={content.name} class='h-16 w-16' />
-				))
+				data.map(
+					(content: {
+						img: string;
+						iconOnlyInLight?: boolean;
+						lightImg?: string;
+						name: string;
+					}) => (
+						<>
+							{content.iconOnlyInLight ? (
+								<div class='h-16 w-16 overflow-hidden dark:hidden'>
+									<img src={content.img} alt={content.name} class='h-16 w-auto max-w-none' />
+								</div>
+							) : (
+								<img
+									src={content.lightImg ?? content.img}
+									alt={content.name}
+									class={cn('h-16 w-16 object-contain', content.lightImg && 'dark:hidden')}
+								/>
+							)}
+							{(content.lightImg || content.iconOnlyInLight) && (
+								<img
+									src={content.img}
+									alt={content.name}
+									class='hidden h-16 w-16 object-contain dark:block'
+								/>
+							)}
+						</>
+					)
+				)
 			) : (
 				<p>Data is empty or not loaded.</p>
 			)
